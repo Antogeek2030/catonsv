@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const phone = '+14102474567';
+const phoneDisplay = '(410) 247-4567';
+---
+<Layout title="Garage Door Remote Not Working | Catonsville Garage Doors" description="Remote or keypad not working? Battery, programming, and antenna diagnosis for all major brands.">
+  <section class="hero" style="padding: 3rem 0 2rem;">
+    <div class="container">
+      <div class="hero-badge">● URGENT &amp; SAME-DAY HELP AVAILABLE</div>
+      <h1 style="font-size: clamp(1.75rem, 4vw, 2.5rem);">Garage Door Remote Not Working</h1>
+      <p class="hero-sub" style="margin-top: 0.75rem;">Remote or keypad not working? Battery, programming, and antenna diagnosis for all major brands.</p>
+      <div class="hero-ctas" style="margin-top: 1.5rem;">
+        <a href={`tel:${phone}`} class="btn btn-primary">Call {phoneDisplay}</a>
+        <a href="/contact/" class="btn btn-outline">Get Help Now</a>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container" style="max-width: 800px;">
+      <p>If your garage door is showing this problem in Catonsville, Arbutus, or nearby areas, do not force it. Many issues involve high-tension springs or unbalanced doors that can cause injury or further damage.</p>
+      <p style="margin-top: 1rem;">Our technicians diagnose the root cause quickly and perform the correct repair — often the same day. Call <a href={`tel:${phone}`}>{phoneDisplay}</a> for fast, professional help.</p>
+      <h2 style="margin: 2rem 0 1rem;">What We Check</h2>
+      <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text-muted);">
+        <li>Springs, cables, and balance</li>
+        <li>Tracks, rollers, and hinges</li>
+        <li>Opener motor, sensors, and force settings</li>
+        <li>Remotes, keypads, and safety features</li>
+      </ul>
+      <div style="margin-top: 2rem;">
+        <a href={`tel:${phone}`} class="btn btn-primary">Call for Same-Day Service</a>
+      </div>
+    </div>
+  </section>
+</Layout>

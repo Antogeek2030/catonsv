@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+const phone = '+14102474567';
+const phoneDisplay = '(410) 247-4567';
+---
+<Layout title="Contact Us | Catonsville Garage Doors" description="Contact Catonsville Garage Doors for repair, installation, or emergency service. Call (410) 247-4567 or request a quote.">
+  <section class="hero" style="padding: 3rem 0 2rem;">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p class="hero-sub" style="margin-top: 0.75rem;">Same-day service available. Call or send a message.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container" style="display: grid; gap: 2rem; grid-template-columns: 1fr; max-width: 900px;">
+      <div>
+        <h2 style="margin-bottom: 1rem;">Get in Touch</h2>
+        <p><strong>Phone:</strong> <a href={`tel:${phone}`}>{phoneDisplay}</a></p>
+        <p style="margin-top: 0.5rem;"><strong>Address:</strong> 1404 Parker Rd, Arbutus, MD 21227</p>
+        <p style="margin-top: 0.5rem;"><strong>Hours:</strong> Open 24/7 for emergencies · Regular service by appointment</p>
+        <p style="margin-top: 1rem;">For the fastest response, call us directly. Describe your issue and location — we will confirm availability and provide an estimated arrival window.</p>
+      </div>
+      <div style="background: var(--bg-section); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
+        <h3 style="margin-bottom: 0.75rem;">Service Areas</h3>
+        <p>Catonsville · Arbutus · Halethorpe · Ellicott City · Woodlawn · Lansdowne · Baltimore and nearby Baltimore County communities.</p>
+        <p style="margin-top: 1rem;"><a href="/service-areas/">View full service area list →</a></p>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+const phone = '+14102474567';
+const phoneDisplay = '(410) 247-4567';
+const areas = [
+  'Catonsville', 'Arbutus', 'Halethorpe', 'Ellicott City', 'Woodlawn',
+  'Lansdowne', 'Relay', 'Baltimore', 'Lochearn', 'Milford Mill',
+  'Pikesville', 'Towson', 'Columbia', 'Jessup', 'Linthicum'
+];
+---
+<Layout title="Service Areas | Catonsville Garage Doors" description="Garage door repair and installation serving Catonsville, Arbutus, Halethorpe, Ellicott City, and greater Baltimore County, MD.">
+  <section class="hero" style="padding: 3rem 0 2rem;">
+    <div class="container">
+      <h1>Service Areas</h1>
+      <p class="hero-sub" style="margin-top: 0.75rem;">Proudly serving Catonsville, Arbutus, and surrounding Maryland communities.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <p style="max-width: 700px; margin-bottom: 2rem;">Based at 1404 Parker Rd in Arbutus, MD 21227, we provide fast garage door repair, spring replacement, opener service, and new door installation throughout Baltimore County and nearby areas.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.75rem;">
+        {areas.map(area => (
+          <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; text-align: center; font-weight: 500;">
+            {area}
+          </div>
+        ))}
+      </div>
+      <p style="margin-top: 2rem;">Don't see your city? Call <a href={`tel:${phone}`}>{phoneDisplay}</a> — we often cover additional nearby locations.</p>
+    </div>
+  </section>
+</Layout>

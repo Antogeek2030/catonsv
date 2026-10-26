@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<Layout title={`${post.data.title} | Catonsville Garage Doors`} description={post.data.description}>
+  <section class="hero" style="padding: 3rem 0 1.5rem;">
+    <div class="container" style="max-width: 800px;">
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">
+        <a href="/blog/">Blog</a> · {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+      </p>
+      <h1 style="font-size: clamp(1.5rem, 3.5vw, 2.25rem);">{post.data.title}</h1>
+      <p class="hero-sub" style="margin-top: 0.75rem;">{post.data.description}</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top: 0;">
+    <div class="container" style="max-width: 800px;">
+      <article class="prose" style="line-height: 1.75;">
+        <Content />
+      </article>
+      <p style="margin-top: 2.5rem;">
+        <a href="/blog/" style="color: var(--primary); font-weight: 600;">← Back to Blog</a>
+      </p>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,41 @@
+---
+const phone = '+14102474567';
+const phoneDisplay = '(410) 247-4567';
+const year = new Date().getFullYear();
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Catonsville Garage Doors</h4>
+        <p>Licensed garage door repair, installation, and opener service serving Catonsville, Arbutus, and greater Baltimore County. Same-day service, upfront pricing, workmanship guarantee.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <p><a href="/services/garage-door-repair/">Garage Door Repair</a></p>
+        <p><a href="/services/garage-door-installation/">Installation</a></p>
+        <p><a href="/services/opener-repair/">Opener Repair</a></p>
+        <p><a href="/services/spring-repair/">Spring Repair</a></p>
+        <p><a href="/services/emergency-service/">Emergency Service</a></p>
+      </div>
+      <div>
+        <h4>Common Problems</h4>
+        <p><a href="/problems/door-wont-open/">Door Won't Open</a></p>
+        <p><a href="/problems/broken-spring/">Broken Spring</a></p>
+        <p><a href="/problems/noisy-door/">Noisy Door</a></p>
+        <p><a href="/problems/remote-not-working/">Remote Issues</a></p>
+        <p><a href="/problems/door-off-track/">Off Track</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href={`tel:${phone}`}>{phoneDisplay}</a></p>
+        <p>1404 Parker Rd<br />Arbutus, MD 21227</p>
+        <p>Open 24 / 7 for emergencies</p>
+        <p style="margin-top:0.75rem"><a href="/service-areas/">Service Areas</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/blog/">Blog</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© {year} Catonsville Garage Doors. All rights reserved. | <a href="/privacy/">Privacy Policy</a></p>
+    </div>
+  </div>
+</footer>

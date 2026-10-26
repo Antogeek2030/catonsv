@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+const phone = '+14102474567';
+const phoneDisplay = '(410) 247-4567';
+---
+<Layout title="About Us | Catonsville Garage Doors" description="Local garage door specialists serving Catonsville, Arbutus, and Baltimore County. Licensed, insured, same-day service.">
+  <section class="hero" style="padding: 3rem 0 2rem;">
+    <div class="container">
+      <h1>About Catonsville Garage Doors</h1>
+      <p class="hero-sub" style="margin-top: 0.75rem;">Local experts dedicated to safe, reliable garage door repair and installation.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container" style="max-width: 800px;">
+      <p>Catonsville Garage Doors is your neighborhood garage door company based near 1404 Parker Rd in Arbutus, Maryland. We serve Catonsville, Arbutus, Halethorpe, Ellicott City, and surrounding Baltimore County communities with honest repairs, quality installations, and responsive emergency service.</p>
+      <p style="margin-top: 1rem;">We focus on doing the job right the first time — correct spring sizing and winding, proper door balance, quality parts, and clear communication. No upselling, no hidden fees.</p>
+      <h2 style="margin: 2rem 0 1rem;">What Sets Us Apart</h2>
+      <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text-muted);">
+        <li>Same-day and 24/7 emergency availability</li>
+        <li>Upfront pricing before work begins</li>
+        <li>Licensed and insured technicians</li>
+        <li>Experience with major door and opener brands</li>
+        <li>Workmanship guarantee on every job</li>
+      </ul>
+      <p style="margin-top: 1.5rem;">Ready for help? Call <a href={`tel:${phone}`}>{phoneDisplay}</a> or <a href="/contact/">request a quote online</a>.</p>
+    </div>
+  </section>
+</Layout>

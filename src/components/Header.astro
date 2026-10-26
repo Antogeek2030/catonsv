@@ -1,0 +1,73 @@
+---
+const phone = '+14102474567';
+const phoneDisplay = '(410) 247-4567';
+const currentPath = Astro.url.pathname;
+---
+<header class="header">
+  <div class="container header-inner">
+    <a href="/" class="logo">
+      <span class="logo-icon">🚪</span>
+      <span class="logo-text">Catonsville<br /><small>Garage Doors</small></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a>
+
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-expanded="false">Our Services <span class="caret">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/services/garage-door-repair/">Garage Door Repair</a>
+          <a href="/services/garage-door-installation/">Garage Door Installation</a>
+          <a href="/services/opener-repair/">Opener Repair &amp; Install</a>
+          <a href="/services/spring-repair/">Spring Repair</a>
+          <a href="/services/emergency-service/">Emergency Service</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-expanded="false">Problems <span class="caret">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/problems/door-wont-open/">Door Won't Open</a>
+          <a href="/problems/broken-spring/">Broken Spring</a>
+          <a href="/problems/noisy-door/">Noisy Garage Door</a>
+          <a href="/problems/remote-not-working/">Remote Not Working</a>
+          <a href="/problems/door-off-track/">Door Off Track</a>
+          <a href="/problems/opener-issues/">Opener Issues</a>
+        </div>
+      </div>
+
+      <a href="/service-areas/">Service Areas</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About Us</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+
+    <a href={`tel:${phone}`} class="header-phone">
+      <span>📞</span>
+      <span class="phone-text">{phoneDisplay}</span>
+    </a>
+    <button class="mobile-toggle" id="menuBtn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
+  btn?.addEventListener('click', () => nav?.classList.toggle('open'));
+
+  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const parent = toggle.closest('.dropdown');
+      const isOpen = parent?.classList.contains('open');
+      document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+      if (!isOpen) parent?.classList.add('open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!(e.target as Element).closest('.dropdown')) {
+      document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+    }
+  });
+</script>

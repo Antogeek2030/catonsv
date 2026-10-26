@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const phone = '+14102474567';
+const phoneDisplay = '(410) 247-4567';
+---
+<Layout title="Garage Door Repair | Catonsville Garage Doors" description="Expert garage door repair in Catonsville and Arbutus. Springs, cables, rollers, tracks, and more. Same-day service.">
+  <section class="hero" style="padding: 3rem 0 2rem;">
+    <div class="container">
+      <div class="hero-badge">● CATONSVILLE &amp; ARBUTUS · SAME-DAY AVAILABLE</div>
+      <h1 style="font-size: clamp(1.75rem, 4vw, 2.5rem);">Garage Door Repair in Catonsville, MD</h1>
+      <p class="hero-sub" style="margin-top: 0.75rem;">Expert garage door repair in Catonsville and Arbutus. Springs, cables, rollers, tracks, and more. Same-day service.</p>
+      <div class="hero-ctas" style="margin-top: 1.5rem;">
+        <a href={`tel:${phone}`} class="btn btn-primary">Call {phoneDisplay}</a>
+        <a href="/contact/" class="btn btn-outline">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container" style="max-width: 800px;">
+      <p>At Catonsville Garage Doors we provide professional garage door repair for homeowners in Catonsville, Arbutus, Halethorpe, and surrounding Baltimore County communities. Our technicians carry common parts and complete most jobs in a single visit with upfront pricing and a workmanship guarantee.</p>
+      <p style="margin-top: 1rem;">Whether you need a quick fix or a full system upgrade, we diagnose accurately, explain options clearly, and deliver reliable results. Call <a href={`tel:${phone}`}>{phoneDisplay}</a> for same-day or scheduled service.</p>
+      <h2 style="margin: 2rem 0 1rem;">Why Choose Us</h2>
+      <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text-muted);">
+        <li>Licensed and insured technicians</li>
+        <li>Same-day service on most repairs</li>
+        <li>Upfront written quotes — no surprises</li>
+        <li>Quality parts and proper balancing</li>
+        <li>Local to Arbutus / Catonsville</li>
+      </ul>
+      <div style="margin-top: 2rem;">
+        <a href={`tel:${phone}`} class="btn btn-primary">Schedule Service — {phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+</Layout>
